@@ -22,17 +22,26 @@ post "/login" do
   end
 end
 
-get "/users/:id" do
-  @user = User.find_by(id: params[:id])
-  if @user
-    erb :"users/profile"
-  # else
+get "/logout" do
+  if logged_in?
+    session[:id] = nil
+    redirect "/"
   end
 end
 
 get "/users/new" do
   erb :"users/new"
 end
+
+get "/users/:id" do
+  @user = User.find_by(id: params[:id])
+  if @user
+    erb :"users/profile"
+  else
+    erb :"users/no-such-user"
+  end
+end
+
 
 post "/users" do
   user = User.new(params[:user])

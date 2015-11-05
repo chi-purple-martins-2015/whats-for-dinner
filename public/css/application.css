@@ -100,3 +100,22 @@ header {
   margin-right: auto;
   width: 70%;
 }
+
+.index-body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  font-size: 14pt;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  /*background-color: rgb(178, 229, 231);*/
+}
+
+.right {
+  float: right;
+  width: 30%
+  /*background-color: rgb(105, 149, 101);*/
+}
