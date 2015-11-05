@@ -4,14 +4,15 @@ end
 
 post "/recipes" do
   if request.xhr?
-    collection_of_ingredients = params[:ingredients]
-
-    collection_of_ingredients.each do |ingredient|
-      components = ingredient.partition(/\A\d?\s?\W?\d?\W?\d?/)
-      amount = components[1].strip!
-      remaining_elements = components.split(" ")
-      unit_of_measurement = remaining_elements.shift
-      food_item = remaining_elements.join(" ")
-    end
+    recipe = Recipe.create(name: params[:name], description: params[:description], steps: params[:steps])
+    ingredients = convert_to_ingredients(params[:ingredients])
+    ingredients.each.update_attribute(:recipe_id, recipe.id)
+    redirect "/recipes/#{recipe.id}"
   end
+end
+
+get "/recipes/:id" do
+  @recipe = Recipe.find_by(id: params[:id])
+  @ingredients = Ingredient.where(recipe_id: params[:id])
+  erb :"recipes/show"
 end

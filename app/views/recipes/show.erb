@@ -1,0 +1,16 @@
+<h1 class="page-title"><%= @recipe.name %></h1>
+<p><%= @recipe.description %></p>
+<div class="steps">
+  <p>Steps:</p>
+  <br>
+  <% @recipe.steps.each do |step| %>
+    <p><%= step %></p>
+  <% end %>
+</div>
+<div class="ingredients">
+  <p>Ingredients:</p>
+  <br>
+  <% @ingredients.each do |ingredient| %>
+    <p><%= ingredient.amount %> <%= ingredient.unit_of_measurement %> <%= ingredient.food_item %></p>
+  <% end %>
+</div>
