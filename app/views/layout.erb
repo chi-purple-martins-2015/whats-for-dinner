@@ -6,6 +6,7 @@
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
   -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/normalize.css">
   <!--
     application.css is where you put your styles
@@ -18,10 +19,20 @@
   <title></title>
 </head>
 <body>
+
   <header>
-    <h1>What's for Dinner?</h1>
-    <a href="/users/new">Register</a> | <a href="/login">Log in</a>
+    <img src="/images/blue_fork.png" class="fork">
+    <h2>What's for Dinner?</h2>
+    <p>
+      <form class="search" method="get" action="#">
+        <input type="text" name="search_item" placeholder="tacos, burgers, soup...">
+        <input type="submit"
+    </p>
+    <p class="header-links">
+      <a href="/users/new">Register</a> | <a href="/login">Log in</a>
+    </p>
   </header>
+
   <%= yield %>
 </body>
 </html>
