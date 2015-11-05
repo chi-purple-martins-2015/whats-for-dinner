@@ -28,9 +28,18 @@ header {
   height: 49px;
 }
 
-h2 {
+.header-title {
   float: left;
+}
+
+.title-link, .title-link:visited {
   color: white;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.title-link:hover {
+  text-decoration: none;
 }
 
 .search {
@@ -39,4 +48,44 @@ h2 {
   margin-top: 28px;
   margin-right: 20px;
   font-size: 12pt;
+}
+
+.page-title {
+  color: #fa6756;
+  text-align: left;
+  margin-left: 200px;
+  margin-top: 60px;
+  font-size: 30pt;
+  font-weight: bolder;
+}
+
+.login-container {
+  border: 1px solid #131839;
+  width: 30%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: em;
+}
+
+.form-group {
+  width: 50%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.invite {
+  margin-top: 20px;
+}
+
+.login-title {
+  color: #fa6756;
+  margin-top: 20px;
+}
+
+.register-link, .register-link:visited {
+  color: #fa6756;
+  text-decoration: none;
 }
