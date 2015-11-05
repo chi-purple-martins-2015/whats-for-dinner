@@ -23,14 +23,15 @@
   <header>
     <img src="/images/blue_fork.png" class="fork">
     <h2>What's for Dinner?</h2>
-    <p>
-      <form class="search" method="get" action="#">
-        <input type="text" name="search_item" placeholder="tacos, burgers, soup...">
-        <input type="submit"
-    </p>
     <p class="header-links">
       <a href="/users/new">Register</a> | <a href="/login">Log in</a>
     </p>
+    <form class="form-inline search" method="get" action="#">
+      <div class="form-group">
+        <input type="text" name="search_item" placeholder="tacos, burgers, soup..." class="form-control" id="exampleInputName2">
+      </div>
+      <button type="submit" class="btn btn-info">Search!</button>
+    </form>
   </header>
 
   <%= yield %>

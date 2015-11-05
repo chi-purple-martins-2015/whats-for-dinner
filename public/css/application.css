@@ -5,6 +5,7 @@ header {
   border-bottom: 2px solid #98D7DD;
   color: #BF4D40;
   font-size: 16pt;
+  font-family: Helvetica, sans-serif;
 }
 
 .header-links {
@@ -32,3 +33,15 @@ h2 {
   color: white;
   /*font-size: */
 }
+
+.search {
+  float: right;
+  width: 20%;
+  margin-top: 28px;
+  margin-right: 20px;
+  font-size: 12pt;
+}
+
+/*.btn {
+  margin-top: 10px;
+}*/
