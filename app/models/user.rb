@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :created_recipes, class_name: "Recipe", foreign_key: :creator_id
-  has_many :recipes
+  has_many :collections
+  has_many :recipes, through: :collections
 
   validates :first_name, presence: true
   validates :last_name, presence: true
