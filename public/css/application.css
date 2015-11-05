@@ -111,11 +111,24 @@ header {
 .left {
   float: left;
   width: 50%;
-  /*background-color: rgb(178, 229, 231);*/
+}
+
+.index-page-title {
+  color: #fa6756;
+  text-align: left;
+  margin-top: 60px;
+  font-size: 30pt;
+  font-weight: bolder;
 }
 
 .right {
   float: right;
-  width: 30%
-  /*background-color: rgb(105, 149, 101);*/
+  width: 40%
+}
+
+.salmon {
+  border: 1px solid lightgray;
+  margin-top: 60px;
+  width: 600px;
+  height: 338px;
 }

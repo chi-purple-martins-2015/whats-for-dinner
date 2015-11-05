@@ -1,0 +1,21 @@
+<div class="login-container">
+  <h2 class="login-title"><strong>Add a New Recipe</strong></h2>
+  <p class="register-description">Enter your recipe details below.</p>
+  <br>
+  <form method="post" action="/recipes">
+    <div class="form-group">
+      <label for="recipe-name">Recipe name:</label>
+      <input type="text" name="recipe[name]" class="form-control" id="recipe-name">
+    </div>
+    <div class="form-group">
+      <label for="recipe-description">Description:</label>
+      <textarea class="form-control" rows="4" name="recipe[description]" id="recipe-description" placeholder="Tell us a bit about your recipe."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="recipe-steps">Steps:</label>
+      <textarea class="form-control" rows="4" name="recipe[steps]" id="recipe-steps" placeholder="1. Preheat oven to 350 degrees."></textarea>
+    </div>
+    <p><button type="submit" class="btn btn-info login-button">Submit Recipe</button></p>
+    <br>
+  </form>
+</div>
