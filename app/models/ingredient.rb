@@ -1,3 +1,4 @@
 class Ingredient < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :recipes
+  validates :name, {presence: true, uniqueness: true}
 end
