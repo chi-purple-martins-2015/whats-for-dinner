@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :created_recipes, class_name: "Recipe", foreign_key: :creator_id
   has_many :recipes
 
   validates :first_name, presence: true
