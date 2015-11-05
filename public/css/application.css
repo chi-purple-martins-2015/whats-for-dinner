@@ -89,3 +89,9 @@ header {
   color: #fa6756;
   text-decoration: none;
 }
+
+.register-description {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
