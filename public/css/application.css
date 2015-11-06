@@ -149,7 +149,7 @@ header {
 
 .steps-container {
   margin-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 5em;
 }
 
 a.user-recipe-link, .user-recipe-link:hover, .user-recipe-link:visited {

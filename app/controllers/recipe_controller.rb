@@ -39,3 +39,8 @@ delete "/users/recipes/:id" do
   current_user.collections.find_by(recipe_id: params[:id]).destroy
   redirect "/recipes/#{params[:id]}"
 end
+
+get "/recipes/:id/edit" do
+  @recipe = Recipe.find_by(id: params[:id])
+  erb :"recipes/edit"
+end
