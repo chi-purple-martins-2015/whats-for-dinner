@@ -20,7 +20,7 @@ module IngredientDataParser
     if remaining_elements.include?(", ")
       name_and_options = remaining_elements.split(", ")
       name_of_food = name_and_options[0]
-      options = name_and_options[1]
+      options = "(" << name_and_options[1] << ")"
     elsif remaining_elements.include?(" (")
       name_and_options = remaining_elements.split(" (")
       name_of_food = name_and_options[0]
