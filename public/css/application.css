@@ -45,7 +45,7 @@ header {
 
 #recipe-ingredient-index-links {
   float: left;
-  margin-left: 100px;
+  margin-left: 50px;
   margin-top: 27px;
 }
 
@@ -70,7 +70,7 @@ header {
 }
 
 #search-box {
-  padding-right: 2em;
+  padding-right: 1em;
 }
 
 .page-title {
@@ -141,7 +141,7 @@ header {
 
 .right {
   float: right;
-  width: 40%
+  width: 48%
 }
 
 .salmon {
