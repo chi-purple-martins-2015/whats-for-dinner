@@ -23,3 +23,9 @@ get "/recipes/:id" do
     erb :"recipes/no-such-recipe"
   end
 end
+
+post "/recipes/:id/add" do
+  recipe = Recipe.find_by(id: params[:id])
+  current_user.recipes << recipe
+  redirect "/recipes/#{recipe.id}"
+end

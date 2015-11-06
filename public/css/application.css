@@ -151,3 +151,9 @@ header {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+a.user-recipe-link, .user-recipe-link:hover, .user-recipe-link:visited {
+  color: #98D7DD;
+  text-decoration: none;
+  font-size: 12pt;
+}
