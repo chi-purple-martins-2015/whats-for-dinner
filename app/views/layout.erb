@@ -24,6 +24,9 @@
   <header>
     <img src="/images/blue_fork.png" class="fork">
     <h2 class="header-title"><a href="/" class="title-link">What's for Dinner?</a></h2>
+    <p class="header-links" id="recipe-ingredient-index-links">
+      <a href="/recipes">View all recipes</a> | <a href="/ingredients">View all ingredients</a>
+    </p>
     <p class="header-links">
       <% if logged_in? %>
       <span class="user-welcome">Welcome, <%= current_user.username %>!</span> | <a href="/users/<%=current_user.id%>">Profile</a> | <a href="/logout">Log out</a>
@@ -33,7 +36,7 @@
     </p>
     <form class="form-inline search" method="get" action="#">
       <div class="form-group">
-        <input type="text" name="search_item" placeholder="tacos, burgers, soup..." class="form-control" id="exampleInputName2">
+        <input type="text" name="search_item" placeholder="tacos, burgers, soup..." class="form-control" id="search-box">
       </div>
       <button type="submit" class="btn btn-info">Search!</button>
     </form>
