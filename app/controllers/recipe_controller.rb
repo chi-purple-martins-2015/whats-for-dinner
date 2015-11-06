@@ -21,4 +21,5 @@ get "/recipes/:id" do
     erb :"recipes/show"
   else
     erb :"recipes/no-such-recipe"
+  end
 end

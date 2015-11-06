@@ -16,6 +16,9 @@ $(document).ready(function() {
       method: "POST",
       url: "/recipes",
       data: {"name": name, "description": description, "steps": recipeSteps, "ingredients": collectionOfIngredients}
-    })
+    });
+    request.done(function(response) {
+
+    });
   });
 });

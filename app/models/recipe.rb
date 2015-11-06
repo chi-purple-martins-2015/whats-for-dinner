@@ -14,4 +14,8 @@ class Recipe < ActiveRecord::Base
   def list_steps
     self.steps.split("\n")
   end
+
+  def creator_username
+    User.find_by(id: self.creator_id).username
+  end
 end

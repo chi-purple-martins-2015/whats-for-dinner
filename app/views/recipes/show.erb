@@ -1,5 +1,7 @@
-<div class="index-body">
+<div class="index-body recipe-container">
   <h1 class="index-page-title"><%= @recipe.name %></h1>
+  <p class="recipe-detail">Added by <%= @recipe.creator_username %></p>
+  <br>
   <p class="recipe-label">Description:</p>
   <p class="recipe-detail"><%= @recipe.description %></p>
   <div class="ingredients-container">
