@@ -4,6 +4,7 @@
     Created by <%= @recipe.creator_username %>
     <% if current_user.created_recipes.include?(@recipe) %>
       | <a href="/recipes/<%=@recipe.id%>/edit" class="user-recipe-link">edit</a>
+       | <a href="/recipes/<%=@recipe.id%>/delete" class="user-recipe-link">delete</a>
     <% end %>
   </p>
   <% if logged_in? %>

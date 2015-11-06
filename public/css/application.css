@@ -41,6 +41,7 @@ header {
   color: white;
   font-weight: bolder;
   text-decoration: none;
+  font-family: 'Lobster Two', cursive;
 }
 
 .title-link:hover {

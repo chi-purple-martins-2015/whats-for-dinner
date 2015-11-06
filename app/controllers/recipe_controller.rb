@@ -44,3 +44,11 @@ get "/recipes/:id/edit" do
   @recipe = Recipe.find_by(id: params[:id])
   erb :"recipes/edit"
 end
+
+put "/recipes/:id" do
+
+end
+
+delete "/recipes/:id" do
+  @recipe = Recipe.find_by(id: params[:id])
+end
