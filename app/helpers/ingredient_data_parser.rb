@@ -15,7 +15,6 @@ module IngredientDataParser
     amount = components.shift.strip
     remaining_elements = components[0].split(" ")
     unit_of_measurement = remaining_elements.shift
-    # name_of_food = remaining_elements.join(" ")
 
     remaining_elements = remaining_elements.join(" ")
     if remaining_elements.include?(", ")
@@ -26,6 +25,8 @@ module IngredientDataParser
       name_and_options = remaining_elements.split(" (")
       name_of_food = name_and_options[0]
       options = "(" << name_and_options[1]
+    else
+      name_of_food = remaining_elements
     end
 
     food_item = FoodItem.find_or_create_by(name: name_of_food)
