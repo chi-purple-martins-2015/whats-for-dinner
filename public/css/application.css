@@ -153,7 +153,11 @@ header {
 }
 
 a.user-recipe-link, .user-recipe-link:hover, .user-recipe-link:visited {
-  color: #98D7DD;
+  color: #6ab0b6;
   text-decoration: none;
   font-size: 12pt;
+}
+
+a.new-link, .new-link:hover, .new-link:visited {
+  color: #fa6756;
 }

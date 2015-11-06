@@ -2,12 +2,15 @@
   <h1 class="index-page-title"><%= @recipe.name %></h1>
   <p class="recipe-detail">Created by <%= @recipe.creator_username %></p>
   <% if logged_in? %>
-    <% if current_user.recipes.include?(@recipe) == false %>
-      <form method="post" action="/recipes/<%=@recipe.id%>/add">
-        <button type="submit" class="btn btn-info">Add this recipe to your collection</button>
+    <% if current_user.recipes.include?(@recipe) %>
+      <form method="post" action="/users/recipes/<%=@recipe.id%>">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submits" class="btn btn-danger">Remove this recipe from your collection</button>
       </form>
     <% else %>
-      <p class="recipe-detail">This recipe is in your collection!</p>
+      <form method="post" action="/users/recipes/<%=@recipe.id%>">
+        <button type="submit" class="btn btn-info">Add this recipe to your collection</button>
+      </form>
     <% end %>
   <% else %>
     <p class="recipe-detail"><a href="/login" class="user-recipe-link">Log in</a> to add this recipe to your collection!</p>

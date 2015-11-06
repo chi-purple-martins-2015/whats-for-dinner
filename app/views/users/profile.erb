@@ -1,23 +1,33 @@
 <div class="index-body recipe-container">
-  <h1 class="index-page-title"><%= @user.username %></h1>
+  <h1 class="index-page-title profile-title"><%= @user.username %></h1>
   <div class="ingredients-container">
-    <p class="recipe-label">Recipes you've created:</p>
+    <br>
+    <% if @user == current_user %>
+      <p class="recipe-label">Recipes you've created:</p>
+    <% else %>
+      <p class="recipe-label">Recipes created by <%= @user.username %>:</p>
+    <% end %>
     <ul>
       <% @user.created_recipes.each do |recipe| %>
         <li><a href="/recipes/<%=recipe.id%>" class="user-recipe-link"><%= recipe.name %></a></li>
       <% end %>
     </ul>
-  </div>
-  <div class="ingredients-container">
-    <p class="recipe-label">Recipes in your collection:</p>
-    <% if @user.recipes.length != 0 %>
-      <ul>
-        <% @user.recipes.each do |recipe| %>
-          <li><a href="/recipes/<%=recipe.id%>" class="user-recipe-link"><%= recipe.name %></a></li>
-        <% end %>
-      </ul>
-    <% else %>
-      <p class="recipe-detail">You haven't added any recipes yet!</p>
+    <% if @user == current_user %>
+      <p><a href="/recipes/new" class="user-recipe-link new-link">Create a new recipe</a></p>
     <% end %>
   </div>
+  <% if @user == current_user %>
+    <div class="ingredients-container">
+      <p class="recipe-label">Recipes in your collection:</p>
+      <% if @user.recipes.length != 0 %>
+        <ul>
+          <% @user.recipes.each do |recipe| %>
+            <li><a href="/recipes/<%=recipe.id%>" class="user-recipe-link"><%= recipe.name %></a></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p class="recipe-detail">You haven't added any recipes yet!</p>
+      <% end %>
+    </div>
+  <% end %>
 </div>

@@ -1,3 +1,8 @@
+get "/recipes" do
+  @recipes = Recipe.all
+  erb :"recipes/index"
+end
+
 get "/recipes/new" do
   erb :"recipes/new"
 end
@@ -24,8 +29,13 @@ get "/recipes/:id" do
   end
 end
 
-post "/recipes/:id/add" do
+post "/users/recipes/:id" do
   recipe = Recipe.find_by(id: params[:id])
   current_user.recipes << recipe
   redirect "/recipes/#{recipe.id}"
+end
+
+delete "/users/recipes/:id" do
+  current_user.collections.find_by(recipe_id: params[:id]).destroy
+  redirect "/recipes/#{params[:id]}"
 end
