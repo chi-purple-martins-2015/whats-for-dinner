@@ -1,7 +1,8 @@
-.ingredient-name {
-  font-size: 12pt;
-  color: black;
-}
+/*.ri-index-links, .ri-index-links:visted, .ri-index-links:hover {
+  color: #fa6756;
+  font-size: 11pt;
+  text-decoration: none;
+}*/
 
 header {
   background-color: #131839;
@@ -42,6 +43,13 @@ header {
   float: left;
 }
 
+#recipe-ingredient-index-links {
+  float: left;
+  margin-left: 100px;
+  margin-top: 27px;
+}
+
+
 .title-link, .title-link:visited {
   color: white;
   font-weight: bolder;
@@ -59,6 +67,10 @@ header {
   margin-top: 28px;
   margin-right: 20px;
   font-size: 12pt;
+}
+
+#search-box {
+  padding-right: 2em;
 }
 
 .page-title {
