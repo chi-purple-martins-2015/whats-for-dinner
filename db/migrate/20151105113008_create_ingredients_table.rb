@@ -5,6 +5,7 @@ class CreateIngredientsTable < ActiveRecord::Migration
       t.belongs_to :recipe, index: true
       t.string :amount
       t.string :unit_of_measurement
+      t.string :options
 
       t.timestamps null: false
     end

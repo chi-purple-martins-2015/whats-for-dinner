@@ -8,18 +8,16 @@ get "/recipes/new" do
 end
 
 post "/recipes" do
-  # if request.xhr?
-    recipe = Recipe.new(name: params[:name], description: params[:description], steps: params[:steps])
-    ingredients_list = params[:ingredients_list].split("\n")
-    ingredients = convert_to_ingredients(ingredients_list)
+  recipe = Recipe.new(name: params[:name], description: params[:description], steps: params[:steps])
+  ingredients_list = params[:ingredients_list].split("\n")
+  ingredients = convert_to_ingredients(ingredients_list)
 
-    ingredients.each do |ingredient|
-      recipe.ingredients << ingredient
-    end
-    recipe.save
-    current_user.created_recipes << recipe
-    redirect "/recipes/#{recipe.id}"
-  # end
+  ingredients.each do |ingredient|
+    recipe.ingredients << ingredient
+  end
+  recipe.save
+  current_user.created_recipes << recipe
+  redirect "/recipes/#{recipe.id}"
 end
 
 get "/recipes/:id" do
@@ -54,4 +52,9 @@ end
 
 delete "/recipes/:id" do
   @recipe = Recipe.find_by(id: params[:id])
+end
+
+get "/ingredients" do
+  @food_items = FoodItem.all
+  erb :fooditems
 end

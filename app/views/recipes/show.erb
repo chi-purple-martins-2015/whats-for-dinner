@@ -27,7 +27,7 @@
   <div class="ingredients-container">
     <p class="recipe-label">Ingredients:</p>
     <% @ingredients.each do |ingredient| %>
-      <p class="recipe-detail"><%= ingredient.amount %> <%= ingredient.unit_of_measurement %> <%= ingredient.food_item %></p>
+      <p class="recipe-detail"><%= ingredient.amount %> <%= ingredient.unit_of_measurement %> <%= ingredient.food_item %> <%= ingredient.options if ingredient.options %></p>
     <% end %>
   </div>
   <div class="steps-container">
