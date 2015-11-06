@@ -10,4 +10,8 @@ class Recipe < ActiveRecord::Base
   validates :name, presence: true
   validates :description, presence: true
   validates :steps, presence: true
+
+  def list_steps
+    self.steps.split("\n")
+  end
 end

@@ -4,7 +4,7 @@ class CreateRecipesTable < ActiveRecord::Migration
       t.belongs_to :creator, index: true
       t.string :name, null: false
       t.text :description, null: false
-      t.array :steps, null: false
+      t.text :steps, null: false
 
       t.timestamps null: false
     end

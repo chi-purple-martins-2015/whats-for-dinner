@@ -11,7 +11,6 @@ get "/users/:id" do
   end
 end
 
-
 post "/users" do
   user = User.new(params[:user])
   if user.save

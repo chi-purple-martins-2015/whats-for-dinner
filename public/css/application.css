@@ -132,3 +132,22 @@ header {
   width: 600px;
   height: 338px;
 }
+
+.recipe-label {
+  font-weight: bolder;
+  font-size: 14pt;
+}
+
+.recipe-detail {
+  font-size: 12pt;
+}
+
+.ingredients-container {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.steps-container {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

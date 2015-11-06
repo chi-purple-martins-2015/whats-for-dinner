@@ -7,8 +7,9 @@ helpers do
 
   def parse_ingredient_data(ingredient)
     components = ingredient.partition(/\A\d?\s?\W?\d?\W?\d?/)
-    amount = components[1].strip!
-    remaining_elements = components.split(" ")
+    components.shift
+    amount = components.shift.strip!
+    remaining_elements = components[0].split(" ")
     unit_of_measurement = remaining_elements.shift
     name_of_food = remaining_elements.join(" ")
 

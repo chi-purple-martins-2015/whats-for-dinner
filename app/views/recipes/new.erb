@@ -2,6 +2,12 @@
   <h2 class="login-title"><strong>Add a New Recipe</strong></h2>
   <p class="register-description">Enter your recipe details below.</p>
   <br>
+  <% if @errors %>
+    <% @errors.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+    <br>
+  <% end %>
   <form class="new-recipe-form" method="post" action="/recipes">
     <div class="form-group">
       <label for="recipe-name">Recipe name:</label>

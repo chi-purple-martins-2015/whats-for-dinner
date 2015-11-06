@@ -1,16 +1,17 @@
-<h1 class="page-title"><%= @recipe.name %></h1>
-<p><%= @recipe.description %></p>
-<div class="steps">
-  <p>Steps:</p>
-  <br>
-  <% @recipe.steps.each do |step| %>
-    <p><%= step %></p>
-  <% end %>
-</div>
-<div class="ingredients">
-  <p>Ingredients:</p>
-  <br>
-  <% @ingredients.each do |ingredient| %>
-    <p><%= ingredient.amount %> <%= ingredient.unit_of_measurement %> <%= ingredient.food_item %></p>
-  <% end %>
+<div class="index-body">
+  <h1 class="index-page-title"><%= @recipe.name %></h1>
+  <p class="recipe-label">Description:</p>
+  <p class="recipe-detail"><%= @recipe.description %></p>
+  <div class="ingredients-container">
+    <p class="recipe-label">Ingredients:</p>
+    <% @ingredients.each do |ingredient| %>
+      <p class="recipe-detail"><%= ingredient.amount %> <%= ingredient.unit_of_measurement %> <%= ingredient.food_item %></p>
+    <% end %>
+  </div>
+  <div class="steps-container">
+    <p class="recipe-label">Steps:</p>
+    <% @recipe.list_steps.each do |step| %>
+      <p class="recipe-detail"><%= step %></p>
+    <% end %>
+  </div>
 </div>
