@@ -10,4 +10,12 @@ class Recipe < ActiveRecord::Base
   validates :name, presence: true
   validates :description, presence: true
   validates :steps, presence: true
+
+  def list_steps
+    self.steps.split("\n")
+  end
+
+  def creator_username
+    User.find_by(id: self.creator_id).username
+  end
 end

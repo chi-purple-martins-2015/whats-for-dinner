@@ -1,0 +1,31 @@
+<div class="login-container">
+  <h2 class="login-title"><strong>Add a New Recipe</strong></h2>
+  <p class="register-description">Enter your recipe details below.</p>
+  <br>
+  <% if @errors %>
+    <% @errors.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+    <br>
+  <% end %>
+  <form class="new-recipe-form" method="post" action="/recipes">
+    <div class="form-group">
+      <label for="recipe-name">Recipe name:</label>
+      <input type="text" name="recipe[name]" class="form-control" id="recipe-name">
+    </div>
+    <div class="form-group">
+      <label for="recipe-description">Description:</label>
+      <textarea class="form-control" rows="4" name="recipe[description]" id="recipe-description" placeholder="Tell us a bit about your recipe."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="ingredients-list">Ingredients (with amounts):</label>
+      <textarea class="form-control" rows="6" name="ingredients_list" id="ingredients-list" placeholder="Place each ingredient on a separate line."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="recipe-steps">Steps:</label>
+      <textarea class="form-control" rows="6" name="recipe[steps]" id="recipe-steps" placeholder="Place each step on a separate line."></textarea>
+    </div>
+    <p><button type="submit" class="btn btn-info login-button">Submit Recipe</button></p>
+    <br>
+  </form>
+</div>

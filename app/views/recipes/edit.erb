@@ -1,0 +1,32 @@
+<div class="login-container">
+  <h2 class="login-title"><strong>Edit Recipe</strong></h2>
+  <p class="register-description">Enter your recipe details below.</p>
+  <br>
+  <% if @errors %>
+    <% @errors.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+    <br>
+  <% end %>
+  <form class="new-recipe-form" method="post" action="/recipes/<%=@recipe.id%>">
+    <input type="hidden" name="_method" value="put">
+    <div class="form-group">
+      <label for="recipe-name">Recipe name:</label>
+      <input type="text" name="recipe[name]" class="form-control" id="recipe-name" value="<%= @recipe.try(:name) %>">
+    </div>
+    <div class="form-group">
+      <label for="recipe-description">Description:</label>
+      <textarea class="form-control" rows="4" name="recipe[description]" id="recipe-description" value="<%= @recipe.try(:description) %>"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="ingredients-list">Ingredients (with amounts):</label>
+      <textarea class="form-control" rows="6" name="ingredients_list" id="ingredients-list" value="<%= @recipe.try(:ingredients) %>"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="recipe-steps">Steps:</label>
+      <textarea class="form-control" rows="6" name="recipe[steps]" id="recipe-steps" value="<%= @recipe.try(:steps) %>"></textarea>
+    </div>
+    <p><button type="submit" class="btn btn-info login-button">Submit Edited Recipe</button></p>
+    <br>
+  </form>
+</div>

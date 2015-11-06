@@ -1,0 +1,8 @@
+<div class="index-body">
+  <h1 class="index-page-title profile-title">List of Recipes</h1>
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <li><a href="/recipes/<%=recipe.id%>" class="user-recipe-link"><%= recipe.name %></a></li>
+    <% end %>
+  </ul>
+</div>

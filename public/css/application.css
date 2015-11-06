@@ -1,0 +1,164 @@
+header {
+  background-color: #131839;
+  width: 100%;
+  height: 75px;
+  border-bottom: 2px solid #98D7DD;
+  color: #BF4D40;
+  font-size: 16pt;
+  font-family: Helvetica, sans-serif;
+}
+
+.user-welcome {
+  font-size: 11pt;
+  color: #EFE4F6;
+}
+
+.header-links {
+  float: right;
+  margin-right: 50px;
+  margin-top: 27px;
+}
+
+.header-links a, a:visited {
+  color: #EFE4F6;
+  font-size: 11pt;
+  text-decoration: none;
+}
+
+.fork {
+  float: left;
+  margin-top: 15px;
+  margin-left: 200px;
+  width: 50px;
+  height: 49px;
+}
+
+.header-title {
+  float: left;
+}
+
+.title-link, .title-link:visited {
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+  font-family: 'Lobster Two', cursive;
+}
+
+.title-link:hover {
+  text-decoration: none;
+}
+
+.search {
+  float: right;
+  width: 20%;
+  margin-top: 28px;
+  margin-right: 20px;
+  font-size: 12pt;
+}
+
+.page-title {
+  color: #fa6756;
+  text-align: left;
+  margin-left: 200px;
+  margin-top: 60px;
+  font-size: 30pt;
+  font-weight: bolder;
+}
+
+.login-container {
+  border: 1px solid #131839;
+  width: 30%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: em;
+}
+
+.form-group {
+  width: 50%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.invite {
+  margin-top: 20px;
+}
+
+.login-title {
+  color: #fa6756;
+  margin-top: 20px;
+}
+
+.register-link, .register-link:visited {
+  color: #fa6756;
+  text-decoration: none;
+}
+
+.register-description {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.index-body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  font-size: 14pt;
+}
+
+.left {
+  float: left;
+  width: 50%;
+}
+
+.index-page-title {
+  color: #fa6756;
+  text-align: left;
+  margin-top: 60px;
+  font-size: 30pt;
+  font-weight: bolder;
+}
+
+.right {
+  float: right;
+  width: 40%
+}
+
+.salmon {
+  border: 1px solid lightgray;
+  margin-top: 60px;
+  width: 600px;
+  height: 338px;
+}
+
+.recipe-label {
+  font-weight: bolder;
+  font-size: 14pt;
+}
+
+.recipe-detail {
+  font-size: 12pt;
+}
+
+.ingredients-container {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.steps-container {
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+
+a.user-recipe-link, .user-recipe-link:hover, .user-recipe-link:visited {
+  color: #6ab0b6;
+  text-decoration: none;
+  font-size: 12pt;
+}
+
+a.new-link, .new-link:hover, .new-link:visited {
+  color: #fa6756;
+}

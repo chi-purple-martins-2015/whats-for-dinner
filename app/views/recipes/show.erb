@@ -1,0 +1,39 @@
+<div class="index-body recipe-container">
+  <h1 class="index-page-title"><%= @recipe.name %></h1>
+  <p class="recipe-detail">
+    Created by <%= @recipe.creator_username %>
+    <% if current_user.created_recipes.include?(@recipe) %>
+      | <a href="/recipes/<%=@recipe.id%>/edit" class="user-recipe-link">edit</a>
+       | <a href="/recipes/<%=@recipe.id%>/delete" class="user-recipe-link">delete</a>
+    <% end %>
+  </p>
+  <% if logged_in? %>
+    <% if current_user.recipes.include?(@recipe) %>
+      <form method="post" action="/users/recipes/<%=@recipe.id%>">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submits" class="btn btn-danger">Remove this recipe from your collection</button>
+      </form>
+    <% else %>
+      <form method="post" action="/users/recipes/<%=@recipe.id%>">
+        <button type="submit" class="btn btn-info">Add this recipe to your collection</button>
+      </form>
+    <% end %>
+  <% else %>
+    <p class="recipe-detail"><a href="/login" class="user-recipe-link">Log in</a> to add this recipe to your collection!</p>
+  <% end %>
+  <br>
+  <p class="recipe-label">Description:</p>
+  <p class="recipe-detail"><%= @recipe.description %></p>
+  <div class="ingredients-container">
+    <p class="recipe-label">Ingredients:</p>
+    <% @ingredients.each do |ingredient| %>
+      <p class="recipe-detail"><%= ingredient.amount %> <%= ingredient.unit_of_measurement %> <%= ingredient.food_item %></p>
+    <% end %>
+  </div>
+  <div class="steps-container">
+    <p class="recipe-label">Steps:</p>
+    <% @recipe.list_steps.each do |step| %>
+      <p class="recipe-detail"><%= step %></p>
+    <% end %>
+  </div>
+</div>

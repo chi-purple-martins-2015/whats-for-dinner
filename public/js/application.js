@@ -1,7 +1,24 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $(".new-recipe-form").on("submit", function() {
+    // event.preventDefault();
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+    var name = $("#recipe-name").val();
+
+    var description = $("#recipe-description").val();
+
+    var recipeIngredients = $("#ingredients-list").val();
+    var collectionOfIngredients = recipeIngredients.split("\n");
+
+    var recipeSteps = $("#recipe-steps").val();
+    // var collectionOfSteps = recipeSteps.split("\n");
+
+    var request = $.ajax({
+      method: "POST",
+      url: "/recipes",
+      data: {"name": name, "description": description, "steps": recipeSteps, "ingredients": collectionOfIngredients}
+    });
+    request.done(function(response) {
+
+    });
+  });
 });
