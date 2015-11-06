@@ -55,6 +55,12 @@ delete "/recipes/:id" do
 end
 
 get "/ingredients" do
-  @food_items = FoodItem.all
+  @food_items = FoodItem.all.order(:name)
   erb :fooditems
+end
+
+get "/ingredients/:id/recipes" do
+  @food = FoodItem.find_by(id: params[:id])
+  @recipes = @food.recipes
+  erb :"recipes/list-by-ingredient"
 end

@@ -2,7 +2,7 @@
   <h1 class="index-page-title profile-title">List of Ingredients</h1>
   <ul>
     <% @food_items.each do |food| %>
-      <li class="ingredient-name"><%= food.name %></li>
+      <li><a href="ingredients/<%=food.id%>/recipes" class="user-recipe-link"><%= food.name %></a></li>
     <% end %>
   </ul>
 </div>
