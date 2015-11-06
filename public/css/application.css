@@ -1,3 +1,8 @@
+.ingredient-name {
+  font-size: 12pt;
+  color: black;
+}
+
 header {
   background-color: #131839;
   width: 100%;
