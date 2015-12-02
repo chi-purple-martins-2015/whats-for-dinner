@@ -2,7 +2,7 @@
   <h1 class="index-page-title"><%= @recipe.name %></h1>
   <p class="recipe-detail">
     Created by <a href="/users/<%=@recipe.creator_id%>" class="user-recipe-link"><%= @recipe.creator_username %></a>
-    <% if current_user.created_recipes.include?(@recipe) %>
+    <% if current_user && current_user.created_recipes.include?(@recipe) %>
       | <a href="/recipes/<%=@recipe.id%>/edit" class="user-recipe-link">edit</a>
        | <a href="/recipes/<%=@recipe.id%>/delete" class="user-recipe-link">delete</a>
     <% end %>
